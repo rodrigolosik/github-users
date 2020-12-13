@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-image: linear-gradient(to right, rgba(250, 3, 188, 0.699), rgba(23, 26, 23, 0.7));
+}
+
+@import '@angular/material/prebuilt-themes/pink-bluegrey.css';
+
+mat-card-title { text-align: center;}
+
+.addButtons > button {
+  display: inline-block;
+  width:50vh;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.mat-card {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+#btnNew {
+  display: block;
+  width: 100%;
+}

@@ -1,0 +1,24 @@
+<mat-accordion>
+  <mat-expansion-panel (opened)="panelOpenState" (closed)="!panelOpenState" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <img width="20" height="20"src="{{ user.avatar_url }}" alt="image"> &nbsp;
+        {{ user.name}}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{ user.bio }}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-list>
+      <mat-list-item>
+        <div mat-line>Location: {{ user?.location }}</div>
+        <div mat-line>Company: {{ user?.company }}</div>
+        <div mat-line>&nbsp;</div>
+        <div mat-line>Actions: &nbsp;
+          <a href="{{user.html_url}}" target="_blank" mat-mini-fab color="secondary" matTooltip="Go to Github Page"><i class="fab fa-github"></i></a>&nbsp;
+          <button (click)="remove(user)" href="#" mat-mini-fab color="warn" matTooltip="Remove"><i class="fas fa-times"></i></button>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </mat-expansion-panel>
+</mat-accordion>
